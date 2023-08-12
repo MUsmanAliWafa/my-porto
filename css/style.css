@@ -1,0 +1,321 @@
+:root {
+  --bg1: #16161a;
+  --bg2: #5c6170;
+  --paragraf: #bfcfe4;
+  --btn: #97FEED;
+  /* color pallet */
+  --dark: #0D101C;
+  --blue-dark: #3F5F90;
+  --blue-mid: #5E7496;
+  --blue-white: #E4E2E9;
+  --contras: #EFD67F;
+
+  --roboto: 'Roboto Slab', serif;
+}
+
+
+.mynavbar {
+  background-color: rgba(124, 154, 199, .3);
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  color: var(--blue-white);
+  font-family: var(--roboto);
+}
+
+.navbar-nav .nav-item a {
+  color: var(--blue-white);
+  display: inline-block;
+  font-size: 1.7rem;
+  margin: 0 1rem;
+}
+
+
+.jumbotron {
+  padding-top: 12rem;
+  background-color: var(--bg1);
+}
+
+.jumbotron h1{
+  font-family: var(--roboto);
+  font-weight: 700;
+  color: var(--blue-white);
+}
+
+
+.jumbotron .lead{
+  color: var(--blue-white) !important;
+  font-weight: 400;
+}
+
+
+.row .col .about-me,
+.row .col .projects-h2,
+.my-keyboard-h2,
+.contact-me{
+  font-family: var(--roboto);
+  color: var(--contras);
+  padding-bottom: 4rem;
+}
+.about-me-p{
+  font-family: var(--roboto);
+  color: var(--blue-white);
+  font-weight: 100;
+}
+.card .card-body{
+  background-color: var(--bg2);
+}
+.card-text{
+  color: var(--blue-white);
+}
+
+
+.about,
+.contact,
+.projects {
+  padding-top: 6rem;
+}
+
+.about,
+.contact {
+  background-color: var(--bg2);
+}
+
+#projects {
+  background-color: var(--bg1);
+}
+
+section {
+  padding-top: 5rem;
+}
+
+/* My Keyboard Section */
+.keyboard-box {
+  position: relative;
+  background-color: var(--bg2);
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.keyboard-box::before {
+  content: 'MY';
+  position: absolute;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.keyboard-box:hover::before {
+  opacity: 0.2;
+}
+
+.keyboard-box::after {
+  content: 'KEYBOARD';
+  position: absolute;
+  color: #fff;
+  font-size: 4.3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.keyboard-box:hover::after {
+  opacity: 0.2;
+}
+
+.keyboard-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.keyboard-box:hover .keyboard-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.keyboard-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.keyboard-box:hover .keyboard-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.keyboard-img {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 80px);
+  max-width: 350px;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.keyboard-box:hover .keyboard-img {
+  transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
+}
+
+
+.wave-div .wave {
+  width: 100vw !important;
+  padding-top: 6rem !important;
+}
+
+footer {
+  background-color: var(--bg1);
+  padding-top: 4rem;
+}
+
+
+/* animasi wave */
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1)
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.50)
+  }
+
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1)
+  }
+}
+
+
+
+
+.waveWrapper {
+  overflow: hidden;
+  position: relative;
+  height: 25vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  /* margin: auto; */
+}
+
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 30vh;
+  bottom: -1px;
+  background-image: linear-gradient(to top, #5c6170 80%, #5c6170 20%, );
+}
+
+.bgTop {
+  z-index: 15;
+  opacity: 0.3;
+}
+
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+
+.bgBottom {
+  z-index: 5;
+}
+
+.wave {
+  position: relative;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+
+.waveTop {
+  background-size: 50% 100px;
+}
+
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.waveMiddle {
+  background-size: 50% 140px;
+}
+
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+
+.waveBottom {
+  background-size: 50% 100px;
+}
+
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+
+
+
+
+/* media Queries */
+
+/* leptop */
+@media (max-width:1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width:758px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* hp */
+@media (max-width:450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .waveTop {
+    background-size: 50% 40px;
+  }
+
+  .waveMiddle {
+    background-size: 50% 70px;
+  }
+
+  .waveBottom {
+    background-size: 50% 40px;
+  }
+}
