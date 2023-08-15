@@ -8,16 +8,16 @@ gsap.from('.navbar', {
   y: '-100%',
   ease: 'bounce'
 });
-gsap.from('.display-4', {
+gsap.registerPlugin(TextPlugin);
+gsap.to('.display-4', {
   delay: 1,
-  duration: 1,
-  opacity: 0,
-  x: '-10%'
+  duration: 1.3,
+  text: 'M.Usman Ali Wafa'
 });
 
 gsap.registerPlugin(TextPlugin);
 gsap.to('.lead', {
-  delay: 1.5,
+  delay: 2.5,
   duration: 1.7,
   text: 'Mahasiswa | Frond End'
 });

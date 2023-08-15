@@ -16,6 +16,7 @@
 
 .mynavbar {
   background-color: rgba(124, 154, 199, .3);
+  backdrop-filter: blur(3px);
 }
 
 .navbar-brand {
@@ -76,6 +77,10 @@
 .projects {
   padding-top: 6rem;
 }
+.wave-div{
+  width: auto;
+  overflow: hidden;
+}
 
 .about,
 .contact {
@@ -84,6 +89,10 @@
 
 #projects {
   background-color: var(--bg1);
+}
+.card .projects-img{
+  max-width: 630px;
+  height: 360px;
 }
 
 section {
@@ -318,4 +327,6 @@ footer {
   .waveBottom {
     background-size: 50% 40px;
   }
+
+
 }
