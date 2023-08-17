@@ -38,14 +38,14 @@
   background-color: var(--bg1);
 }
 
-.jumbotron h1{
+.jumbotron h1 {
   font-family: var(--roboto);
   font-weight: 700;
   color: var(--blue-white);
 }
 
 
-.jumbotron .lead{
+.jumbotron .lead {
   color: var(--blue-white) !important;
   font-weight: 400;
 }
@@ -54,20 +54,23 @@
 .row .col .about-me,
 .row .col .projects-h2,
 .my-keyboard-h2,
-.contact-me{
+.contact-me {
   font-family: var(--roboto);
   color: var(--contras);
   padding-bottom: 4rem;
 }
-.about-me-p{
+
+.about-me-p {
   font-family: var(--roboto);
   color: var(--blue-white);
   font-weight: 100;
 }
-.card .card-body{
+
+.card .card-body {
   background-color: var(--bg2);
 }
-.card-text{
+
+.card-text {
   color: var(--blue-white);
 }
 
@@ -77,7 +80,8 @@
 .projects {
   padding-top: 6rem;
 }
-.wave-div{
+
+.wave-div {
   width: auto;
   overflow: hidden;
 }
@@ -90,7 +94,8 @@
 #projects {
   background-color: var(--bg1);
 }
-.card .projects-img{
+
+.card .projects-img {
   max-width: 630px;
   height: 360px;
 }
@@ -290,6 +295,68 @@ footer {
 .waveAnimation .waveBottom {
   animation: move_wave 15s linear infinite;
 }
+
+
+
+
+
+/* model box */
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 999;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw;
+  /* Full width */
+  height: 100vh;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  /* background-color: rgb(255, 0, 0); */
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black w/ opacity */
+  backdrop-filter: blur(2px);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  /* border: 1px solid #000000; */
+
+  box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.4);
+  /* bayangan masuk ke dalam  */
+  border-radius: 5px 25px 25px 25px;
+  width: 80vw;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  /* float: right; */
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus,
+.tutup:hover,
+.tutup:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 
 
 
