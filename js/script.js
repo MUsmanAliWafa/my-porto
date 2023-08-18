@@ -79,36 +79,28 @@ form.addEventListener('submit', (e) => {
 
 
 // modal start
-// Get the modal
-const modal = document.querySelector("#myModal1");
+let preveiwContainer = document.querySelector('.products-preview');
+let previewBox = preveiwContainer.querySelectorAll('.preview');
 
-// Get the button that opens the modal
-const btn = document.querySelector("#myBtn1");
+document.querySelectorAll('.products-container .product').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+});
 
-// Get the <span> element that closes the modal
-const close = document.querySelector(".close");
-
-const tutupBtn = document.querySelector(".tutup");
-
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-
-close.onclick = function () {
-  modal.style.display = "none";
-}
-tutupBtn.onclick = function () {
-  modal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});
 // modal end 
 
 
