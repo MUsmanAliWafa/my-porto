@@ -308,6 +308,7 @@ footer {
   height: 100vh;
   width: 100%;
   background: rgba(0,0,0,.8);
+  backdrop-filter: blur(5px);
   display: none;
   align-items: center;
   justify-content: center;
@@ -317,10 +318,11 @@ footer {
   display: none;
   padding: 2rem;
   text-align: center;
-  background: #fff;
+  background: var(--bg2);
   position: relative;
   margin: 1.5rem;
-  width: auto;
+  border-radius: 10px;
+  /* width: auto; */
 
   
 }
@@ -336,7 +338,7 @@ footer {
   position: absolute;
   top:1rem; right:1.5rem;
   cursor: pointer;
-  color:#444;
+  color:#ffffff;
   font-size: 4rem;
 }
 
@@ -345,35 +347,16 @@ footer {
 }
 
 .products-preview .preview h3{
-  color:#444;
+  color:var(--bg1);
   padding:.5rem 0;
   font-size: 2.5rem;
+  
 }
-
-.products-preview .preview .stars{
-  padding:1rem 0;
-  font-size: 1.7rem;
-}
-
-.products-preview .preview .stars i{
-  color:#27ae60;
-}
-
-.products-preview .preview .stars span{
-  color:#999;
-}
-
 .products-preview .preview p{
   line-height: 1.5;
   padding:1rem 0;
   font-size: 1.6rem;
-  color:#777;
-}
-
-.products-preview .preview .price{
-  padding:1rem 0;
-  font-size: 2.5rem;
-  color:#27ae60;
+  color:var(--bg1);
 }
 
 .products-preview .preview .buttons{
@@ -392,17 +375,12 @@ footer {
 }
 
 .products-preview .preview .buttons a.cart{
-  background: #444;
-  color:#fff;
+  background: var(--bg1);
+  color:var(--paragraf);
 }
 
 .products-preview .preview .buttons a.cart:hover{
-  background: #111;
-}
-
-.products-preview .preview .buttons a.buy:hover{
-  background: #444;
-  color:#fff;
+  background: var(--blue-dark);
 }
 /*model end*/
 
